@@ -14,7 +14,7 @@ for el in list(body):
 
 lines = open(src, encoding='utf8').read().split('\n')
 title = lines[0].lstrip('# ').strip()
-meta = [l.strip() for l in lines[1:8] if l.strip() and not l.startswith('凡例') and not l.startswith('#')]
+meta = [l.strip() for l in lines[1:10] if l.strip() and not l.startswith('凡例') and not l.startswith('#') and not l.startswith('作者メモ') and not l.startswith('決まり')]
 doc.add_paragraph(title, style='Title')
 for m in meta:
     doc.add_paragraph(m, style='Subtitle')
