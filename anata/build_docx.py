@@ -37,7 +37,7 @@ for l in lines[i:]:
         doc.add_paragraph('＊', style='Transition')
     elif s == '終わり':
         doc.add_paragraph('終わり', style='Transition')
-    elif re.match(r'^[^「」\s　]{1,12}「', s):
+    elif re.match(r'^[^「」\s。]{1,12}「.*」$', s):
         doc.add_paragraph(s, style='Dialogue')
     else:
         doc.add_paragraph(s.lstrip('　'), style='Action')
